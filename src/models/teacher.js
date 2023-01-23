@@ -6,6 +6,6 @@ const teacherShema = new mongoose.Schema({
     discipline: {type: String, required: true}
 })
 
-const teachers = mongoose.model("teachers")
+const teachers = mongoose.model("teachers", teacherShema)
 
 export default teachers;

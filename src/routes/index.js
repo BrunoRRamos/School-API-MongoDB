@@ -1,5 +1,7 @@
 import express from "express";
 import studentsRoutes from "./studentsRoutes.js"
+import teachersRoutes from "./teachersRoutes.js"
+
 
 const routes = (app) => {
     app.route('/').get((req, res) => {
@@ -8,7 +10,8 @@ const routes = (app) => {
 
     app.use(
         express.json(),
-        studentsRoutes
+        studentsRoutes,
+        teachersRoutes
     )
 }
 

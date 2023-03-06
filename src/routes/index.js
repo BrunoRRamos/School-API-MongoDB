@@ -6,7 +6,7 @@ import classesRoutes from "./classesRoutes.js"
 
 const routes = (app) => {
     app.route('/').get((req, res) => {
-        res.staus(200).send({title: "HOME PAGE"})
+       res.send({title: "HOME PAGE"})
     });
 
     app.use(

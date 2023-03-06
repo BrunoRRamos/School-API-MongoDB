@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv"
+dotenv.config();
 
-mongoose.connect("mongodb+srv://MisterBeamCs:Selmamaria31@school-api.k3bjsup.mongodb.net/School-API?");
+const DBSTRING = process.env.DBSTRINGCONNECT;
+mongoose.connect(`${DBSTRING}`);
 
 let db = mongoose.connection;
 
